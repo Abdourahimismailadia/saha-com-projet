@@ -1,180 +1,431 @@
-# 🌍 SAHA Communautaires
+# SAHA Communautaires 🇲🇷
 
-### Plateforme numérique intégrée de santé communautaire en Mauritanie
+### Plateforme numérique intégrée de santé communautaire, de nutrition et de suivi des interventions en Mauritanie
 
-**SAHA Communautaires** est une solution numérique conçue pour renforcer les systèmes de santé communautaire en Mauritanie à travers la digitalisation des activités de terrain, la collecte des données, le suivi des interventions et l'amélioration de la prise de décision.
-
-L'application ambitionne de mettre à la disposition des relais communautaires, agents de santé, superviseurs, coordinateurs de projets et organisations humanitaires un outil moderne, accessible et adapté aux réalités du terrain.
+![Status](https://img.shields.io/badge/Status-Under%20Development-orange)
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
+![FastAPI](https://img.shields.io/badge/FastAPI-API-009688?logo=fastapi)
+![MySQL](https://img.shields.io/badge/Database-MySQL-4479A1?logo=mysql)
+![GitHub](https://img.shields.io/badge/Version%20Control-GitHub-181717?logo=github)
 
 ---
 
-## 🎯 1. Vision du projet
+## 1. Présentation du projet
 
-Contribuer à l'amélioration de la santé des populations en développant un écosystème numérique capable de rapprocher les services de santé des communautés, de faciliter le travail des acteurs de terrain et de renforcer la qualité des données sanitaires.
+**SAHA Communautaires** est un projet de développement d'une plateforme numérique intégrée destinée à renforcer les interventions de santé communautaire en Mauritanie.
 
-## 🎯 2. Objectifs spécifiques
+La plateforme vise à mettre à disposition des organisations non gouvernementales, des programmes de santé, des superviseurs, des agents de terrain et des relais communautaires un outil centralisé permettant de planifier, documenter, suivre et analyser les activités communautaires.
 
-- Digitaliser les activités de santé communautaire.
-- Faciliter la collecte et la centralisation des données sanitaires.
-- Renforcer le suivi nutritionnel des enfants et des populations vulnérables.
-- Améliorer la supervision des relais communautaires.
-- Faciliter le suivi et l'évaluation des interventions.
-- Produire des données fiables pour orienter les décisions.
-- Renforcer la coordination entre les acteurs communautaires et les structures sanitaires.
+Elle ambitionne de contribuer à l'amélioration de la qualité des interventions, à la disponibilité des données sanitaires et nutritionnelles et à la prise de décision fondée sur des données fiables.
 
-## 🏥 3. Principaux modules envisagés
+SAHA Communautaires est conçu dans une logique évolutive, modulaire et adaptée aux réalités opérationnelles du contexte mauritanien.
 
-| Module | Fonctionnalités |
-|---|---|
-| Gestion des utilisateurs | Comptes, authentification et profils |
-| Gestion des rôles | Administrateur, coordinateur, superviseur, agent et relais |
-| Santé communautaire | Enregistrement et suivi des activités |
-| Nutrition | Dépistage et suivi nutritionnel |
-| Sensibilisation | Planification et suivi des séances communautaires |
-| Collecte des données | Enregistrement et centralisation des informations |
-| Supervision | Suivi des agents et relais communautaires |
-| Géolocalisation | Référentiel géographique des interventions |
-| Rapports | Indicateurs, statistiques et tableaux de bord |
-| Administration | Gestion des permissions et paramètres |
+**Vision :** contribuer à la transformation numérique de la santé communautaire en Mauritanie grâce à des données fiables, accessibles et exploitables.
 
-*Ces modules constituent la vision fonctionnelle du projet ; leur développement sera progressif.*
+## 2. Objectifs du projet
 
-## 🛠️ 4. Technologies utilisées
+### Objectif général
+
+Développer une plateforme numérique intégrée permettant d'améliorer la gestion, le suivi, la coordination et l'évaluation des interventions de santé communautaire en Mauritanie.
+
+### Objectifs spécifiques
+
+- Digitaliser la collecte des données communautaires.
+- Améliorer le suivi des activités des relais communautaires.
+- Renforcer la surveillance nutritionnelle et sanitaire.
+- Faciliter la supervision des interventions sur le terrain.
+- Centraliser les données des bénéficiaires et des activités.
+- Produire des rapports statistiques et opérationnels.
+- Faciliter le suivi des indicateurs de performance.
+- Améliorer la coordination entre les acteurs communautaires et les structures de santé.
+- Soutenir la planification et la prise de décision.
+
+## 3. Publics cibles
+
+La plateforme est destinée notamment aux :
+
+- Administrateurs de la plateforme.
+- Coordinateurs de projets et programmes.
+- Responsables de santé et de nutrition.
+- Superviseurs de terrain.
+- Agents de santé communautaire.
+- Relais communautaires.
+- Organisations non gouvernementales.
+- Programmes et partenaires du secteur de la santé.
+- Structures sanitaires et acteurs institutionnels autorisés.
+
+## 4. Modules fonctionnels envisagés
+
+Le développement de SAHA Communautaires suivra une architecture modulaire.
+
+### 4.1. Gestion des utilisateurs et des accès
+
+- Création et gestion des comptes utilisateurs.
+- Authentification sécurisée.
+- Gestion des profils et des rôles.
+- Attribution des permissions.
+- Gestion des organisations et des équipes.
+- Suivi des connexions et des activités des utilisateurs.
+
+### 4.2. Référentiel géographique de la Mauritanie
+
+- Gestion des régions (Wilayas).
+- Gestion des départements (Moughataas).
+- Gestion des communes.
+- Gestion des localités et villages.
+- Rattachement géographique des activités et des bénéficiaires.
+- Possibilité de géolocalisation des interventions.
+
+### 4.3. Gestion des bénéficiaires
+
+- Enregistrement des bénéficiaires.
+- Gestion des informations sociodémographiques.
+- Identification des ménages.
+- Suivi des bénéficiaires.
+- Historique des interventions.
+- Gestion des références vers les structures sanitaires.
+
+### 4.4. Santé et nutrition communautaires
+
+- Dépistage nutritionnel.
+- Suivi de la malnutrition aiguë.
+- Suivi de la croissance des enfants.
+- Suivi des femmes enceintes et allaitantes.
+- Sensibilisation à l'alimentation du nourrisson et du jeune enfant.
+- Promotion de la diversité alimentaire.
+- Suivi des interventions de prévention.
+- Identification et référencement des cas nécessitant une prise en charge.
+
+### 4.5. Sensibilisation communautaire
+
+- Planification des séances de sensibilisation.
+- Enregistrement des activités réalisées.
+- Gestion des thèmes de sensibilisation.
+- Suivi des participants.
+- Suivi des relais communautaires.
+- Évaluation de la couverture des activités.
+
+### 4.6. Gestion des activités et des projets
+
+- Planification opérationnelle.
+- Gestion des activités.
+- Suivi des réalisations.
+- Suivi des indicateurs.
+- Gestion des équipes.
+- Suivi des objectifs et des résultats.
+- Production des rapports d'activités.
+
+### 4.7. Collecte et gestion des données
+
+- Formulaires numériques.
+- Contrôle de cohérence des données.
+- Validation des enregistrements.
+- Gestion des doublons.
+- Historisation des modifications.
+- Exportation des données.
+- Préparation des données pour les analyses statistiques.
+
+### 4.8. Tableaux de bord et analyse
+
+- Indicateurs de santé communautaire.
+- Indicateurs nutritionnels.
+- Suivi des activités.
+- Couverture géographique.
+- Performance des équipes.
+- Visualisation des tendances.
+- Production de rapports périodiques.
+
+### 4.9. Gestion des alertes et des notifications
+
+- Alertes de suivi.
+- Notifications aux superviseurs.
+- Signalement des situations prioritaires.
+- Rappels des activités.
+- Suivi des références.
+
+### 4.10. Fonctionnement hors connexion
+
+Une fonctionnalité de fonctionnement hors connexion est envisagée afin de permettre aux agents communautaires de collecter des données dans les zones où la connexion Internet est limitée.
+
+Les données seront synchronisées avec le serveur lorsque la connexion sera disponible.
+
+## 5. Architecture technique
+
+Le projet repose sur une architecture évolutive séparant la logique métier, les données, les interfaces et les services techniques.
 
 ### Backend
-- Python
-- FastAPI
-- SQLAlchemy
-- PyMySQL
+
+- Python : langage principal.
+- FastAPI : développement de l'API REST.
+- Pydantic : validation des données.
+- SQLAlchemy : gestion des interactions avec la base de données.
+- PyMySQL : connectivité MySQL.
 
 ### Base de données
-- MySQL
-- MySQL Workbench
 
-### Documentation et tests API
-- Swagger UI
-- OpenAPI
+- MySQL : stockage des données relationnelles.
+- Gestion des relations entre les tables.
+- Contraintes d'intégrité.
+- Indexation et optimisation des requêtes.
+- Gestion des sauvegardes.
 
 ### Outils de développement
-- Visual Studio Code
-- Git
-- GitHub
-- R / RStudio (analyse statistique et exploitation des données)
 
-## 🏗️ 5. Architecture du projet
+- Visual Studio Code : environnement de développement.
+- Git : gestion des versions.
+- GitHub Desktop : gestion des modifications et synchronisation.
+- GitHub : hébergement du code source.
+- MySQL Workbench : administration de la base de données.
+- RStudio : analyses statistiques et exploitation des données.
 
-SAHA Communautaires repose sur une architecture évolutive organisée autour de plusieurs composantes :
+### Technologies complémentaires prévues
+
+- Docker : conteneurisation des services.
+- Redis : mise en cache, gestion de tâches et optimisation des performances.
+- Power BI : analyse et visualisation avancée des données.
+- Tests automatisés : validation de la qualité du code.
+- Documentation technique : suivi de l'architecture et des fonctionnalités.
+
+Ces technologies seront intégrées progressivement selon les besoins réels du projet.
+
+## 6. Organisation des rôles et permissions
+
+Le système prévoit plusieurs niveaux d'accès :
+
+| Rôle | Responsabilité |
+|---|---|
+| ADMIN | Administration générale |
+| COORDINATEUR | Coordination des projets |
+| SUPERVISEUR | Supervision des activités |
+| AGENT | Gestion des interventions de terrain |
+| RELAIS | Collecte et sensibilisation communautaire |
+| LECTEUR | Consultation des données autorisées |
+
+L'accès aux fonctionnalités sera contrôlé par un système de rôles et de permissions (RBAC).
+
+## 7. Structure technique du projet
+
+La structure cible du projet sera organisée de manière modulaire :
 
 ```text
-SAHA-COMMUNAUTAIRES/
+SAHA-Communautaires/
 │
-├── backend/
-│   ├── app/
-│   │   ├── main.py
-│   │   ├── database.py
-│   │   ├── models/
-│   │   ├── schemas/
-│   │   ├── routers/
-│   │   ├── services/
-│   │   └── security/
+├── app/
+│   ├── main.py
+│   ├── core/
+│   │   ├── config.py
+│   │   ├── security.py
+│   │   └── permissions.py
 │   │
-│   ├── requirements.txt
-│   └── .env
-│
-├── database/
-│   └── saha_database.sql
-│
-├── documentation/
+│   ├── database/
+│   │   ├── connection.py
+│   │   └── session.py
+│   │
+│   ├── models/
+│   ├── schemas/
+│   ├── crud/
+│   ├── api/
+│   │   └── v1/
+│   ├── services/
+│   └── utils/
 │
 ├── tests/
 │
+├── migrations/
+│
+├── scripts/
+│
+├── docs/
+│
+├── .env.example
 ├── .gitignore
-└── README.md
+├── requirements.txt
+├── README.md
+└── Dockerfile
 ```
 
-*Cette arborescence représente l'organisation cible du projet et sera ajustée selon l'évolution du développement.*
+Cette organisation représente une structure cible qui sera adaptée au fur et à mesure du développement.
 
-## 🔐 6. Sécurité et gestion des accès
+## 8. Installation et configuration
 
-La plateforme prévoit un système de gestion des accès basé sur les rôles et les permissions.
+### Prérequis
 
-Les profils envisagés sont :
+- Python 3.
+- MySQL Server.
+- MySQL Workbench.
+- Visual Studio Code.
+- Git.
+- GitHub Desktop.
 
-1. ADMIN : Administrateur général.
-2. COORDINATEUR : Coordination des projets.
-3. SUPERVISEUR : Supervision des activités de terrain.
-4. AGENT : Agent communautaire.
-5. RELAIS : Relais communautaire.
-6. LECTEUR : Consultation des informations autorisées.
+### Récupération du projet
 
-La sécurité des données, la confidentialité des informations sanitaires et la protection des utilisateurs constituent des priorités du développement.
+```bash
+git https://github.com/Abdourahimismailadia/saha-com-projet/tree/main
 
-## 🇲🇷 7. Une solution adaptée à la Mauritanie
+cd SAHA-Communautaires
+```
 
-SAHA Communautaires est pensé pour répondre aux besoins du système de santé communautaire mauritanien.
+### Création de l'environnement virtuel
 
-Le projet ambitionne notamment de prendre en compte :
+```bash
+python -m venv venv
+```
 
-- Le découpage administratif de la Mauritanie.
-- Les wilayas, moughataas et communes.
-- Les localités et villages.
-- Les réalités opérationnelles des organisations humanitaires.
-- Les contraintes de connectivité dans les zones rurales.
-- Les besoins des relais communautaires et des équipes de supervision.
+Activation sous Windows :
 
-## 🚀 8. État d'avancement
+```powershell
+.\venv\Scripts\Activate.ps1
+```
 
-<details>
-<summary>Développement technique en cours</summary>
+### Installation des dépendances
 
-- [x] Initialisation du projet backend.
-- [x] Mise en place de l'API avec FastAPI.
-- [x] Connexion à la base de données MySQL.
-- [x] Première structure des tables de données.
-- [x] Mise en place des rôles utilisateurs.
-- [x] Documentation interactive avec Swagger.
-- [ ] Finalisation du système de permissions.
-- [ ] Développement des modules fonctionnels.
-- [ ] Mise en place de l'interface utilisateur.
-- [ ] Développement de l'application mobile Android.
-- [ ] Tests fonctionnels et sécuritaires.
-- [ ] Déploiement de la plateforme.
+```bash
+pip install -r requirements.txt
+```
 
-</details>
+### Configuration des variables d'environnement
 
-## 🔭 9. Perspectives de développement
+Créer un fichier `.env` à partir du modèle `.env.example`.
 
-À terme, SAHA Communautaires ambitionne de devenir une plateforme intégrée comprenant :
+Les variables nécessaires seront notamment :
 
-- Une application mobile Android pour les relais communautaires.
-- Une interface web pour les superviseurs et coordinateurs.
-- Un système de collecte de données hors connexion avec synchronisation.
-- Des tableaux de bord dynamiques.
-- Des outils d'analyse statistique.
-- Un système de suivi-évaluation des projets.
-- Des fonctionnalités de cartographie sanitaire.
+```env
+DATABASE_URL=
+SECRET_KEY=
+DEBUG=False
+```
 
-## 🤝 10. Contribution
+Ne jamais publier les véritables mots de passe ou clés secrètes sur GitHub.
 
-SAHA Communautaires est un projet en cours de développement.
+### Lancement de l'application
 
-Les contributions, suggestions techniques et collaborations susceptibles de renforcer la qualité et l'utilité de la plateforme sont les bienvenues.
+```bash
+uvicorn app.main:app --reload
+```
 
-## 👨‍💻 11. Auteur et porteur du projet
+L'API sera accessible localement à l'adresse :
 
-**Abdourahim Dia**  
-Nutritionniste – Santé publique  
-Développement numérique et santé communautaire
+http://127.0.0.1:8000
 
-Projet : **SAHA Communautaires**  
-Pays : 🇲🇷 Mauritanie
+Documentation interactive :
 
-## 📜 12. Licence
+http://127.0.0.1:8000/docs
 
-Le choix de la licence sera défini avant la première diffusion publique du projet.
+Les commandes et chemins seront adaptés à la structure réellement mise en place dans le projet.
+
+## 9. Sécurité et protection des données
+
+La sécurité constitue un élément fondamental de SAHA Communautaires.
+
+Les mesures à mettre en place comprennent :
+
+- Authentification sécurisée.
+- Gestion des rôles et permissions.
+- Protection des mots de passe.
+- Gestion sécurisée des sessions et des jetons.
+- Validation des données entrantes.
+- Protection contre les accès non autorisés.
+- Journalisation des opérations sensibles.
+- Sauvegardes régulières.
+- Gestion des erreurs.
+- Protection des informations personnelles et sanitaires.
+- Politique de conservation et de suppression des données.
+
+Les données sanitaires et personnelles devront être traitées conformément aux exigences applicables en matière de confidentialité et de protection des données en Mauritanie.
+
+## 10. Tests et assurance qualité
+
+Le projet intégrera progressivement une stratégie de tests comprenant :
+
+- Tests unitaires.
+- Tests d'intégration.
+- Tests des API.
+- Tests des permissions.
+- Tests de cohérence de la base de données.
+- Tests de sécurité.
+- Tests de performance.
+- Tests fonctionnels.
+
+L'objectif est de garantir la fiabilité et la stabilité de la plateforme avant son déploiement opérationnel.
+
+## 11. Feuille de route du développement
+
+Le développement sera organisé en plusieurs phases.
+
+| Phase | Activités principales |
+|---|---|
+| Phase 1 | Architecture générale et base de données |
+| Phase 2 | Gestion des utilisateurs et permissions |
+| Phase 3 | Référentiel géographique national |
+| Phase 4 | Gestion des bénéficiaires et ménages |
+| Phase 5 | Modules santé et nutrition |
+| Phase 6 | Sensibilisation et activités communautaires |
+| Phase 7 | Collecte et validation des données |
+| Phase 8 | Tableaux de bord et rapports |
+| Phase 9 | Notifications et tâches automatisées |
+| Phase 10 | Application mobile et mode hors connexion |
+| Phase 11 | Tests, sécurité et optimisation |
+| Phase 12 | Déploiement, formation et maintenance |
+
+Les phases seront réalisées progressivement, avec validation technique et fonctionnelle de chaque module.
+
+## 12. Sauvegarde et gestion des versions
+
+Le projet utilise Git et GitHub pour assurer le suivi des modifications du code source.
+
+Les pratiques prévues sont :
+
+- Commits réguliers.
+- Messages de commit explicites.
+- Utilisation de branches pour les développements importants.
+- Synchronisation régulière avec GitHub.
+- Gestion des versions.
+- Sauvegarde indépendante de la base de données MySQL.
+
+GitHub ne remplace pas les sauvegardes de la base de données.
+
+## 13. Perspectives d'évolution
+
+À terme, SAHA Communautaires ambitionne de devenir une plateforme intégrée capable de soutenir :
+
+- La surveillance communautaire de la santé.
+- Le suivi nutritionnel des populations vulnérables.
+- La gestion des interventions humanitaires.
+- La coordination des acteurs communautaires.
+- La production d'indicateurs fiables.
+- L'analyse des données pour la prise de décision.
+- Le suivi des performances des programmes.
+- L'interopérabilité avec d'autres systèmes d'information sanitaires, selon les possibilités techniques et institutionnelles.
+
+## 14. Statut actuel du projet
+
+SAHA Communautaires est actuellement en phase de développement.
+
+Les travaux portent notamment sur :
+
+- La mise en place de l'environnement technique.
+- Le développement du backend avec Python et FastAPI.
+- La conception de la base de données MySQL.
+- La structuration des rôles et permissions.
+- La préparation de l'architecture modulaire.
+- La mise en place du contrôle de versions avec Git et GitHub.
+
+Les fonctionnalités présentées dans ce document constituent la vision fonctionnelle et la feuille de route du projet. Elles ne sont pas toutes encore opérationnelles.
+
+## 15. Contribution
+
+Le projet a vocation à évoluer avec les contributions de développeurs, d'experts en santé publique, de nutritionnistes, de spécialistes des systèmes d'information sanitaires et d'acteurs de terrain.
+
+Toute contribution devra respecter les principes de qualité du code, de sécurité, de documentation et de protection des données.
+
+## 16. Licence
+
+La licence du projet sera définie ultérieurement en fonction du statut institutionnel et des conditions de diffusion de SAHA Communautaires.
 
 ---
 
-### « La technologie au service des communautés, la donnée au service de la santé, et l'innovation au service du développement humain. »
+**SAHA Communautaires**
 
-**SAHA Communautaires – Construire aujourd'hui la santé communautaire de demain.**
+*Le numérique au service de la santé communautaire et du développement humain en Mauritanie.*
+
+Projet en développement — Mauritanie 🇲🇷
