@@ -260,7 +260,7 @@ Cette organisation représente une structure cible qui sera adaptée au fur et �
 ### Récupération du projet
 
 ```bash
-git https://github.com/Abdourahimismailadia/saha-com-projet/tree/main
+git https:https://github.com/Abdourahimismailadia/saha-com-projet.git
 
 cd SAHA-Communautaires
 ```
