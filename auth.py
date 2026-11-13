@@ -95,6 +95,7 @@ def obtenir_utilisateur_connecte(
                     u.email,
                     u.langue,
                     u.organisation_id,
+                    r.role_id,
                     r.code_role,
                     r.libelle
                 FROM utilisateurs u
@@ -115,3 +116,36 @@ def obtenir_utilisateur_connecte(
         )
 
     return dict(utilisateur)
+def exiger_permission(code_permission: str):
+
+    def verifier_permission(
+        utilisateur: dict = Depends(obtenir_utilisateur_connecte)
+    ):
+        with engine.connect() as connexion:
+
+            resultat = connexion.execute(
+                text("""
+                    SELECT COUNT(*)
+                    FROM role_permissions rp
+                    INNER JOIN permissions p
+                        ON rp.permission_id = p.permission_id
+                    WHERE rp.role_id = :role_id
+                    AND p.code_permission = :code_permission
+                """),
+                {
+                    "role_id": utilisateur["role_id"],
+                    "code_permission": code_permission
+                }
+            )
+
+            autorisation = resultat.scalar()
+
+        if autorisation == 0:
+            raise HTTPException(
+                status_code=403,
+                detail="Accès refusé : vous ne possédez pas cette permission."
+            )
+
+        return utilisateur
+
+    return verifier_permission
