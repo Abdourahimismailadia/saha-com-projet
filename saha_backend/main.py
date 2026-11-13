@@ -2,11 +2,16 @@
 from fastapi import FastAPI, HTTPException, Depends
 from pydantic import BaseModel, Field
 from sqlalchemy import text
+
+from database import engine
+
 from auth import (
     verifier_mot_de_passe,
     creer_token,
-    obtenir_utilisateur_connecte
+    obtenir_utilisateur_connecte,
+    exiger_permission
 )
+
 from database import engine
 from auth import verifier_mot_de_passe, creer_token
 
@@ -133,4 +138,16 @@ def consulter_profil(
             "role": utilisateur["code_role"],
             "organisation_id": utilisateur["organisation_id"]
         }
+    }
+@app.get("/test-permission/menages")
+def tester_permission_menages(
+    utilisateur: dict = Depends(
+        exiger_permission("MENAGES_CREER")
+    )
+):
+    return {
+        "message": "Autorisation accordée !",
+        "utilisateur": utilisateur["nom_complet"],
+        "role": utilisateur["code_role"],
+        "permission": "MENAGES_CREER"
     }
