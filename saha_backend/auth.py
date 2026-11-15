@@ -149,3 +149,6 @@ def exiger_permission(code_permission: str):
         return utilisateur
 
     return verifier_permission
+
+
+ABDOOURAHIM
