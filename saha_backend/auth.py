@@ -151,4 +151,3 @@ def exiger_permission(code_permission: str):
     return verifier_permission
 
 
-ABDOOURAHIM
